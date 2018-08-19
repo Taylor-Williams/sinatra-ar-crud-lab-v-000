@@ -39,7 +39,7 @@ class ApplicationController < Sinatra::Base
     redirect '/posts/':id
   end
 
-  delete '/models/:id/delete' do
+  delete '/posts/:id/delete' do
     Post.destroy(params[:id])
     erb :delete
   end
