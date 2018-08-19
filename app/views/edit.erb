@@ -8,7 +8,7 @@
     <h1>wowee! good going chief! here is your post, <%=@post.name%>!</h1>
     <p>amazing content! <%=@post.content%></p>
     <br>
-    <form class="update" action="posts/<%=@post.id%>" method="post">
+    <form action="posts/<%=@post.id%>" method="post">
       <input id="hidden" type="hidden" name="_method" value="patch">
       <input type="hidden" name="id" value="<%=@post.id%>">
       <label for="name">what is the name you want</label>
