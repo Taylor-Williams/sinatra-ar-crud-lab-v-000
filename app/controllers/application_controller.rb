@@ -14,7 +14,8 @@ class ApplicationController < Sinatra::Base
 
   post '/posts' do
     puts "we got here"
-    @posts = Post.create(name: params[:name], content: params[:content])
+    Post.create(name: params[:name], content: params[:content])
+    @posts = Post.all
     puts "here?"
     erb :index
   end
