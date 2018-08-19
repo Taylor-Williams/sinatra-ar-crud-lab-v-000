@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-  post '/posts' do
+  post '/posts/posts' do
     puts "we got here"
     new_post = Post.create(name: params[:name], content: params[:content])
     puts "here?"
