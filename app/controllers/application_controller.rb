@@ -38,4 +38,8 @@ class ApplicationController < Sinatra::Base
     post.update(name: params[:name], content: params[:content])
     redirect '/posts/':id
   end
+
+  delete '/models/:id/delete' do
+    erb :delete
+  end
 end
