@@ -5,10 +5,10 @@
     <title>edit your post!</title>
   </head>
   <body>
+    <h1>wowee! good going chief! here is your post, <%=@post.name%>!</h1>
+    <p>amazing content! <%=@post.content%></p>
+    <br>
     <form class="update" action="posts/<%=@post.id%>" method="post">
-      <h1>wowee! good going chief! here is your post, <%=@post.name%>!</h1>
-      <p>amazing content! <%=@post.content%></p>
-      <br>
       <input id="hidden" type="hidden" name="_method" value="patch">
       <label for="name">what is the name you want</label>
       <input type="text" name="name">
